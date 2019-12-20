@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,10 +30,19 @@ import javafx.scene.control.Button;
  */
 public class FXMLDocumentController implements Initializable {
     
-    @FXML
-    private Label label;
-    @FXML
     private Button Log;
+    private Button Back;
+    private Button Ex;
+    @FXML
+    private Button Ad;
+    @FXML
+    private Button Del;
+    @FXML
+    private Button Out;
+    @FXML
+    private Button Bac;
+    @FXML
+    private Button Et;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -50,7 +60,53 @@ public class FXMLDocumentController implements Initializable {
              Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
          }
         
-    }       
+    }  
+   if (event.getSource()==Back){
+         try {
+             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+             Parent root1 = (Parent) fxmlLoader.load();
+             Stage stage = new Stage();
+             stage.initModality(Modality.APPLICATION_MODAL);
+             stage.initStyle(StageStyle.UNDECORATED);
+             stage.setTitle("ABC");
+             stage.setScene(new Scene(root1));
+             stage.show();
+         } catch (IOException ex) {
+             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+    }     
+if (event.getSource()==Ex){
+        
+                         Platform.exit();
+        
+        
+    }     
+   if (event.getSource()==Bac){
+         try {
+             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+             Parent root1 = (Parent) fxmlLoader.load();
+             Stage stage = new Stage();
+             stage.initModality(Modality.APPLICATION_MODAL);
+             stage.initStyle(StageStyle.UNDECORATED);
+             stage.setTitle("ABC");
+             stage.setScene(new Scene(root1));
+             stage.show();
+         } catch (IOException ex) {
+             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+    }     
+if (event.getSource()==Et){
+        
+                         Platform.exit();
+        
+        
+    }  
+
+
+
+     
     }
     
     @Override

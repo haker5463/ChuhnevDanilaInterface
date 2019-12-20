@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -30,7 +31,10 @@ public class LogController implements Initializable {
 
     @FXML
     private Button log;
-
+    @FXML
+    private TextField login;
+    @FXML
+    private TextField password;
     /**
      * Initializes the controller class.
      */
@@ -38,23 +42,33 @@ public class LogController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+  
     @FXML
     private void handleButtonAction(ActionEvent event) {
-   if (event.getSource()==log){
-         try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
+    String lg= login.getText();
+    String pw= password.getText();
+    String l="Danil";
+    String p="123321";
+        if (event.getSource()==log){
+       if ((lg.equals(l))&&(pw.equals(p))) {
+           try {
+               FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+               Parent root1 = (Parent) fxmlLoader.load();
+               Stage stage = new Stage();
+               stage.initModality(Modality.APPLICATION_MODAL);
+               stage.initStyle(StageStyle.UNDECORATED);
+               stage.setTitle("ABC");
+               stage.setScene(new Scene(root1));
+               stage.show();
+           } catch (IOException ex) {
+               Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+           }
         
-    }
+   } else {
+           
+  login.setText("ERROR");
+  password.setText("ERROR");
+  
+   }
     
-}}
+}}}
