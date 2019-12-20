@@ -4,14 +4,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="205.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="205.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication23.MenuController">
    <children>
-      <Button layoutX="68.0" layoutY="74.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Repairs" textFill="#4b39ed" />
-      <Button layoutX="68.0" layoutY="110.0" mnemonicParsing="false" text="Masters" textFill="#3923db" />
-      <Button layoutX="70.0" layoutY="145.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="Repair" textFill="#502bcf" />
-      <Button layoutX="69.0" layoutY="180.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="User" textFill="#4e3de3" />
-      <Button layoutX="69.0" layoutY="217.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Auto" textFill="#5737e5" />
-      <Button layoutX="81.0" layoutY="302.0" mnemonicParsing="false" text="Exit" textFill="#f20c0c" />
+      <Button fx:id="one" layoutX="68.0" layoutY="74.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Repairs" textFill="#4b39ed" />
+      <Button fx:id="two" layoutX="68.0" layoutY="110.0" onAction="#handleButtonAction" mnemonicParsing="false" text="Masters" textFill="#3923db" />
+      <Button fx:id="three" layoutX="70.0" layoutY="145.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="Repair" textFill="#502bcf" />
+      <Button fx:id="four" layoutX="69.0" layoutY="180.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="User" textFill="#4e3de3" />
+      <Button fx:id="five" layoutX="69.0" layoutY="217.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Auto" textFill="#5737e5" />
+      <Button fx:id="six" layoutX="81.0" layoutY="302.0" onAction="#handleButtonAction" mnemonicParsing="false" text="Exit" textFill="#f20c0c" />
       <Label layoutX="22.0" layoutY="14.0" text="To go to the table select it" textFill="#e41010" />
    </children>
 </AnchorPane>

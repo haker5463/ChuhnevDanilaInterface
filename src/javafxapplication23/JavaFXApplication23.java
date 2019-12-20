@@ -20,7 +20,7 @@ import javafx.stage.Stage;
  * @author user
  */
 public class JavaFXApplication23 extends Application {
-//  private static final  String url = "jdbc:mysql://localhost:3306/Tayota";
+//  private static final  String url = "jdbc:mysql://localhost:3306/Danila";
 //    private static  String user = "root";
 //    private static final String password = "pi159357";
 //
@@ -29,13 +29,15 @@ public class JavaFXApplication23 extends Application {
 //    private static Statement stmt;
 //    static ResultSet rs;   
 //    
-   @Override
+     
+    @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Log.fxml"));
+        
         Scene scene = new Scene(root);
+        
         stage.setScene(scene);
         stage.show();
-        
     }
 //       @Override
 //    public void stop(){

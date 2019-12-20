@@ -17,26 +17,31 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.scene.control.Button;
 
 /**
+ * FXML Controller class
  *
  * @author user
  */
-public class FXMLDocumentController implements Initializable {
-    
+public class LogController implements Initializable {
+
     @FXML
-    private Label label;
-    @FXML
-    private Button Log;
-    
+    private Button log;
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+
     @FXML
     private void handleButtonAction(ActionEvent event) {
-     if (event.getSource()==Log){
+   if (event.getSource()==log){
          try {
              FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
              Parent root1 = (Parent) fxmlLoader.load();
@@ -50,12 +55,6 @@ public class FXMLDocumentController implements Initializable {
              Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
          }
         
-    }       
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-    }    
-    
-}
+}}
